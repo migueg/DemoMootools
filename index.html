@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>DEMO</title>
+
+</head>
+
+<body>
+  
+    <div class="input-group mb-3" style="width: 99%;">
+        <h1 style="text-align: center;">Tareas</h1>
+        <input style="width: 80%;" id="tarea" type="text" class="form-control" placeholder="Escriba su tarea"
+            aria-label="Escriba su tarea" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" onclick="añadir()" type="button">Añadir</button>
+        </div>
+    </div>
+
+    <style>
+        .mb-3 {
+            background-color: #1c88eec9;
+            padding: 30px 40px;
+            color: white;
+            
+        }
+
+        .mb-3:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: #eee;
+            font-size: 18px;
+            transition: 0.2s;
+
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+        ul li:nth-child(odd) {
+            background: #f9f9f9;
+        }
+
+
+        ul li:hover {
+            background: #ddd;
+        }
+
+
+        ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+
+        ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+        }
+
+        .close:hover {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+    <h3>Pendientes</h3>
+    <ul id="myUL">
+        <li>Ir al gimnasio</li>
+
+    </ul>
+    <h3>Realizadas</h3>
+    <ul id="realizadas">
+        <li class="checked">Hacer la compra</li>
+
+    </ul>
+
+
+    <script src="MooTools-Core-1.6.0.js"></script>
+    <script src="tareas.js"></script>
+
+</body>
+
+</html>
